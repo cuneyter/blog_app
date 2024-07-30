@@ -1,18 +1,20 @@
-import React from "react";
 import Link from "next/link";
+import { BookOpenCheck } from "lucide-react";
 
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <Link href="/">Blog App Icon</Link>
+        <Link href="/">
+          <BookOpenCheck color="green"/>
+        </Link>
       </div>
       <div className="flex-none gap-4">
         <div className="form-control">
           <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto"/>
         </div>
         <div>
-          <Link href="/create" className="btn btn-ghost">
+          <Link href="/blog/new" className="btn btn-ghost">
             Create Post
           </Link>
         </div>
