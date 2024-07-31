@@ -26,6 +26,19 @@ You'll need the following installed
 
 First, set up the database:
 
+**Setting Up Environment Variables**
+
+Create a .env file in the root of your project and add the following line to set up your database connection:
+
+```dotenv
+DATABASE_URL="postgresql://<postgres_user_name>:<postgres_user_password>@localhost:5432/blog_app?schema=public"
+```
+Replace <postgres_user_name> and <postgres_user_password> with your PostgreSQL username and password.
+
+**Setting Up the Database**
+
+Run the following command to create the database:
+
 ```bash
 npx prisma migrate dev
 ```
