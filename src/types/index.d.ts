@@ -22,3 +22,9 @@ export interface IBlogDetailPageProps {
     id: string;
   }
 }
+
+export interface IContextProps {
+  params: {
+    postId: string;
+  }
+}
