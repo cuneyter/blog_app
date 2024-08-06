@@ -8,7 +8,7 @@ export async function DELETE(req: Request, context: IContextProps) {
         id: context.params.postId,
       },
     });
-    return NextResponse.json({message: "Post deleted"}, {status: 204});
+    return new Response(null, {status: 204});
   } catch (error) {
     return NextResponse.json({message: "Could not delete the post"}, {status: 500});
   }

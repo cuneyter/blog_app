@@ -28,3 +28,7 @@ export interface IContextProps {
     postId: string;
   }
 }
+
+export interface IButtonActionProps {
+  id: string;
+}
