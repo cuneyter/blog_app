@@ -1,19 +1,23 @@
-'use client';
-
 import ButtonAction from "@/components/ButtonAction";
 import BackButton from "@/components/BackButton";
+import { FC } from "react";
+import { IBlogDetailPageProps } from "@/types";
+import { getPost } from "@/utils/db";
 
-const BlogDetailPage = () => {
+const BlogDetailPage: FC<IBlogDetailPageProps> = async ({ params }) => {
+  const post = await getPost(params.id);
+
   return (
     <div>
-      <BackButton/>
+      <BackButton />
       <div className="mb-8">
-        <h1 className="text-2xl font-bold my-4">Post title</h1>
-        <ButtonAction/>
+        <h1 className="text-2xl font-bold my-4">{post?.title}</h1>
+        <ButtonAction />
       </div>
-        <p className="text-gray-700">Post content</p>
+      <p className="text-gray-700">{post?.content}</p>
+      {post?.tag && <div className="badge badge-outline">{post.tag.name}</div>}
     </div>
-  )
-}
+  );
+};
 
 export default BlogDetailPage;
