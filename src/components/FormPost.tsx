@@ -46,7 +46,7 @@ const FormPost: FC<IFormPostProps> = ({ submit, isEditing }) => {
         <span className="loading loading-spinner loading-md"></span>
         :
         <select
-          {...register("tag", {required: true })}
+          {...register("tagId", {required: true })}
           className="select select-bordered w-full max-w-lg"
           defaultValue=""
         >

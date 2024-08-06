@@ -3,7 +3,7 @@ import {Tag} from "@prisma/client";
 export type FormInputPost = {
   title: string;
   content: string;
-  tag: string;
+  tagId: string;
 };
 
 export  interface IPost {
