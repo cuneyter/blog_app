@@ -30,7 +30,7 @@ const ButtonAction: FC<IButtonActionProps> = ({ id }) => {
 
   return (
     <div>
-      <Link href={`/edit/${id}`} className="btn btn-primary mr-2">
+      <Link href={`/blog/edit/${id}`} className="btn btn-primary mr-2">
         <Pencil className="mr-1" /> Edit
       </Link>
       <button onClick={() => deletePost()} className="btn btn-error">

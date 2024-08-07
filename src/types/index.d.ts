@@ -1,4 +1,5 @@
 import {Tag} from "@prisma/client";
+import {SubmitHandler} from "react-hook-form";
 
 export type FormInputPost = {
   title: string;
@@ -10,6 +11,7 @@ export  interface IPost {
   id: string;
   title: string;
   content: string;
+  tagId: string;
   tag: Tag
 }
 
@@ -31,4 +33,16 @@ export interface IContextProps {
 
 export interface IButtonActionProps {
   id: string;
+}
+
+export interface IFormPostProps {
+  submit: SubmitHandler<FormInputPost>;
+  isEditing: boolean;
+  initialValue?: FormInputPost;
+}
+
+export interface IEditPostProps {
+  params : {
+    id : string
+  }
 }

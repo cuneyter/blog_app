@@ -33,3 +33,19 @@ export async function PATCH(req: Request, context: IContextProps) {
     return NextResponse.json({message: "Could not update the post"}, {status: 500});
   }
 }
+
+export async function GET(req: Request, context: IContextProps) {
+  try {
+    const post = await db.post.findUnique({
+      where: {
+        id: context.params.postId,
+      },
+      include: {
+        tag: true,
+      }
+    });
+    return NextResponse.json(post, {status: 200});
+  } catch (error) {
+    return NextResponse.json({message: "Could not find the post"}, {status: 404});
+  }
+}

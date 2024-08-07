@@ -6,14 +6,12 @@ import { FormInputPost } from "@/types";
 import { FC } from "react";
 import axios from "axios";
 import {Tag} from "@prisma/client";
+import { IFormPostProps } from "@/types";
 
-interface IFormPostProps {
-  submit: SubmitHandler<FormInputPost>;
-  isEditing: boolean;
-}
-
-const FormPost: FC<IFormPostProps> = ({ submit, isEditing }) => {
-  const { register, handleSubmit} = useForm<FormInputPost>();
+const FormPost: FC<IFormPostProps> = ({ submit, isEditing, initialValue }) => {
+  const { register, handleSubmit} = useForm<FormInputPost>(
+    { defaultValues: initialValue }
+  );
 
   // Fetch tags
   const { data: dataTags, isLoading: isLoadingTags } = useQuery<Tag[]>({
