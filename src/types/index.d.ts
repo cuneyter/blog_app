@@ -38,7 +38,8 @@ export interface IButtonActionProps {
 export interface IFormPostProps {
   submit: SubmitHandler<FormInputPost>;
   isEditing: boolean;
-  initialValue?: FormInputPost;
+  dataPost?: FormInputPost;
+  isPendingSubmit: boolean;
 }
 
 export interface IEditPostProps {

@@ -8,9 +8,9 @@ import axios from "axios";
 import {Tag} from "@prisma/client";
 import { IFormPostProps } from "@/types";
 
-const FormPost: FC<IFormPostProps> = ({ submit, isEditing, initialValue }) => {
+const FormPost: FC<IFormPostProps> = ({ submit, isEditing, dataPost, isPendingSubmit }) => {
   const { register, handleSubmit} = useForm<FormInputPost>(
-    { defaultValues: initialValue }
+    { defaultValues: dataPost }
   );
 
   // Fetch tags
@@ -56,7 +56,12 @@ const FormPost: FC<IFormPostProps> = ({ submit, isEditing, initialValue }) => {
       }
 
       <button type="submit" className="btn btn-primary w-full max-w-lg">
-        {isEditing ? "Update Post" : "Create Post"}
+        {isPendingSubmit && (
+          <span className="loading loading-spinner-small"></span>
+        )}
+        {isEditing ?
+          (isPendingSubmit ? "Updating..." : "Update Post")  :
+          (isPendingSubmit ? "Creating..." : "Create Post")}
       </button>
     </form>
   );

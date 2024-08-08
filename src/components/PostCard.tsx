@@ -9,11 +9,11 @@ const PostCard: FC<IPostCardProps>= ({post}) => {
     <div className="card bg-base-100 w-full shadow-xl border">
       <div className="card-body">
         <h2 className="card-title">{ title }</h2>
-        <p>{ content }</p>
+        <p>{content.length > 50 ? `${content.slice(0, 50)}...` : content}</p>
         <div className="card-actions justify-end">
           <div className="badge badge-outline">{tag.name}</div>
           <Link href={`/blog/${id}`} className="hover:underline">
-            Read More
+            Read more...
           </Link>
         </div>
       </div>

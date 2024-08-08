@@ -52,7 +52,12 @@ const EditPost: FC<IEditPostProps> = ( { params } ) => {
   return (
     <div>
       <h1 className='text-2xl my-4 font-bold text-center'>Edit Post</h1>
-      <FormPost submit={handleEditPost} isEditing={true} initialValue={dataPost} />
+      <FormPost
+        submit={handleEditPost}
+        isEditing={true}
+        dataPost={dataPost}
+        isPendingSubmit={isPendingSubmit}
+      />
     </div>
   );
 }
