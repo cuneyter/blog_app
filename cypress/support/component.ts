@@ -13,6 +13,10 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+//Ensure global styles are loaded
+// https://github.com/cypress-io/cypress-component-testing-apps/blob/main/react-next13-ts/cypress/support/component.ts
+import '../../src/styles/globals.css';
+
 // Import commands.js using ES2015 syntax:
 import './commands'
 
