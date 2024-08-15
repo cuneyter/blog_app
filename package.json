@@ -13,13 +13,13 @@
   },
   "dependencies": {
     "@prisma/client": "^5.17.0",
-    "@tanstack/react-query": "^5.51.15",
+    "@tanstack/react-query": "^5.51.23",
     "axios": "^1.7.2",
-    "lucide-react": "^0.417.0",
+    "lucide-react": "^0.427.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.52.1"
+    "react-hook-form": "^7.52.2"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -32,7 +32,7 @@
     "postcss": "^8",
     "prisma": "^5.17.0",
     "start-server-and-test": "^2.0.5",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.9",
     "typescript": "^5"
   }
 }
