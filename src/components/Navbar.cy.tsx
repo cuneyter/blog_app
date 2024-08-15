@@ -34,14 +34,11 @@ describe('<Navbar />', () => {
   it('checks dropdown items', () => {
     cy.get('.avatar').click(); // Open the dropdown
     cy.contains('Profile').click();
-    // Add assertions for what should happen after clicking Profile, if any
 
     cy.get('.avatar').click(); // Reopen the dropdown
     cy.contains('Settings').click();
-    // Add assertions for what should happen after clicking Settings, if any
 
     cy.get('.avatar').click(); // Reopen the dropdown
     cy.contains('Logout').click();
-    // Add assertions for what should happen after clicking Logout, if any
   });
 });
