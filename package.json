@@ -15,7 +15,7 @@
     "@prisma/client": "^5.22.0",
     "@tanstack/react-query": "^5.61.3",
     "axios": "^1.7.9",
-    "lucide-react": "^0.461.0",
+    "lucide-react": "^0.469.0",
     "next": "15.0.3",
     "react": "^19",
     "react-dom": "^19",
