@@ -31,7 +31,7 @@
     "eslint-config-next": "15.0.3",
     "postcss": "^8",
     "prisma": "^6.10.1",
-    "start-server-and-test": "^2.0.9",
+    "start-server-and-test": "^2.0.12",
     "tailwindcss": "^4.1.10",
     "typescript": "^5"
   }
